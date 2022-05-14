@@ -1,0 +1,19 @@
+//---- foundation ----//
+// variable
+@import 'foundation/variable/color';
+@import 'foundation/variable/elevation';
+@import 'foundation/variable/font';
+// mixin
+@import 'foundation/mixin/animation';
+@import 'foundation/mixin/mediaqueries';
+// base
+@import 'foundation/base/reset';
+@import 'foundation/base/customize';
+
+//---- layout ----//
+@import 'layout/main';
+
+//---- object ----//
+// components
+// project
+// utils
