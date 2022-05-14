@@ -1,0 +1,44 @@
+@import '@/assets/styles/foundation/variable/_color.scss';
+@import '@/assets/styles/foundation/variable/_elevation.scss';
+@import '@/assets/styles/foundation/variable/_font.scss';
+@import '@/assets/styles/foundation/mixin/_animation.scss';
+@import '@/assets/styles/foundation/mixin/_mediaqueries.scss';
+
+.c-button {
+  @include transition(color);
+  width: 100%;
+  padding: 2px;
+  background: #FFF linear-gradient(45deg, rgba(#000, 0.7) 0%, rgba(#000, 0) 25%, rgba(#000, 0.7) 50%, rgba(#000, 0) 75%, rgba(#000, 0.7) 100%);
+  clip-path: polygon(0 50%, 21px 0, calc(100% - 21px) 0, 100% 50%, calc(100% - 21px) 100%, 21px 100%);
+  cursor: pointer;
+  color: #FFF;
+  &:hover {
+    color: rgba(#FFF, 0.5);
+  }
+  &.is-disabled {
+    color: transparent;
+    pointer-events: none;
+  }
+}
+
+.c-button__inner {
+  @include transition(background color font-weight);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding: 0 2rem;
+  background: #291580 linear-gradient(0deg, rgba(#000, 0.8) 0%, rgba(#000, 0) 100%);
+  clip-path: polygon(0 50%, 20px 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 20px 100%);
+  font-weight: normal;
+  text-align-last: left;
+  &.is-active {
+    background: #FF7D00 linear-gradient(0deg, transparent 50%, #FFB800 100%);
+    color: #000;
+    font-weight: bold;
+  }
+}
+
+.c-button__text {
+  display: block;
+}

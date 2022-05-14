@@ -1,0 +1,29 @@
+@import '@/assets/styles/foundation/variable/_color.scss';
+@import '@/assets/styles/foundation/variable/_elevation.scss';
+@import '@/assets/styles/foundation/variable/_font.scss';
+@import '@/assets/styles/foundation/mixin/_animation.scss';
+@import '@/assets/styles/foundation/mixin/_mediaqueries.scss';
+
+.c-choices {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.c-choices__item {
+  width: 50%;
+  &:nth-child(1),
+  &:nth-child(2) {
+    margin-bottom: 1.5rem;
+  }
+  &:nth-child(odd) {
+    @include media-pc {
+      padding-right: 0.5rem;
+    }
+  }
+  &:nth-child(even) {
+    @include media-pc {
+      padding-left: 0.5rem;
+    }
+  }
+}

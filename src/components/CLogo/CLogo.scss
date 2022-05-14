@@ -1,0 +1,46 @@
+@import '@/assets/styles/foundation/variable/_color.scss';
+@import '@/assets/styles/foundation/variable/_elevation.scss';
+@import '@/assets/styles/foundation/variable/_font.scss';
+@import '@/assets/styles/foundation/mixin/_animation.scss';
+@import '@/assets/styles/foundation/mixin/_mediaqueries.scss';
+
+.c-logo {
+  z-index: -1;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  animation-name: rotate;
+  animation-duration: 180s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  @include media-sp {
+    height: 200px;
+  }
+  @include media-pc {
+    height: 350px;
+  }
+}
+
+.c-logo__image {
+  display: block;
+  position: absolute;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include media-sp {
+    width: 350px;
+  }
+  @include media-pc {
+    max-width: 600px;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
