@@ -5,7 +5,7 @@ env:
 extends:
   - 'plugin:vue/vue3-recommended'
   - 'eslint:recommended'
-  - 'prettier'
+  - '@vue/eslint-config-prettier'
 parser: 'vue-eslint-parser'
 parserOptions:
   ecmaVersion: 12
